@@ -1,19 +1,9 @@
 const {exec} = require('../db/mysql')
 
 const getMes = ()=>{
-    let idArr = [0,1,2,3,4]
-    for(let i =0;i<5;i++){
-        idArr[i] = Math.round(Math.random()*10) 
-
-        for(var j = 0; j < i; j++){
-            if(idArr[i] == idArr[j]){
-                i--
-            }
-        }
-    }
 
     let sql =
-    `select * from \`mytodo\`.\`messages\` where (mesid=${idArr[0]} or mesid=${idArr[1]} or mesid=${idArr[2]} or mesid=${idArr[3]} or mesid=${idArr[4]});`
+    'SELECT * FROM \`mytodo\`.\`messages\` ORDER BY RAND() LIMIT 5;'
 
     return exec(sql).then(data=>{
         return {data,code:200}

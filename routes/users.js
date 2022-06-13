@@ -52,6 +52,15 @@ router.post('/registe', function(req, res, next) {
   })
 })
 
+
+router.get('/loginout',function(req,res,next){
+  // 清除浏览器cookie
+  res.clearCookie('connect.sid');
+
+  res.json(
+    new SuccessModel({code:200},'退出登录成功')
+  )
+})
 // 发送邮件 获取验证码
 router.use('/emails', function (req, res, next) {
   let qqEmail= req.body.email;
