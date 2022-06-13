@@ -1,24 +1,7 @@
-# app
+## 适配移动端的web共享记事本
+## 创新点:能够发布共享记事，该事件将会在社区中展示，大家可以对其留言鼓励
+## 传统：发布仅自己可见的记事
 
-## Project setup
-```
-yarn install
-```
+### npm install
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### npm run serve
